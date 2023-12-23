@@ -243,6 +243,24 @@ airqualityno2long["month"]=airqualityno2long["dateTime"].dt.month
 print(airqualityno2long)
 abcd=airqualityno2long.groupby([airqualityno2long["dateTime"].dt.weekday,"location"])["value"].mean()
 print(abcd)
+fig,axs=plt.subplots(figsize=(12,5))
+airqualityno2long.groupby(airqualityno2long["dateTime"].dt.hour)["value"].mean().plot(kind="bar",rot=0,ax=axs)
+plt.xlabel("Hour of the Day")
+plt.ylabel("$NO_2 (mg/m^3)$")
+fig.savefig("hours.png")
+plt.show()
+no_2=airqualityno2long.pivot(index="dateTime",columns="location",values="value")
+print(no_2)
+print(no_2.index.weekday,no_2.index.month,no_2.index.year)
+no_2["2019-05-20":"2019-05-21"].plot()
+plt.show()
+monthly_max=no_2.resample("M").max()
+print(monthly_max)
 
 
+
+
+
+no_2.resample("D").mean().plot(style="-o",figsize=(10,5))
+plt.show()
 
