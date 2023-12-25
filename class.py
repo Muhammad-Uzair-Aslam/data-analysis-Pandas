@@ -261,16 +261,17 @@ import matplotlib.pyplot as plt
 
 
 # print(monthly_max)
-import pandas as pd
-titanic=pd.read_csv("titanic.csv")
-print(titanic.describe())
-print(titanic.head())
-print(titanic.dtypes)
-
-print(titanic["Age"].min())
-print(titanic["Age"].max())
+# import pandas as pd
+# titanic=pd.read_csv("titanic.csv")
+# print(titanic.describe())
+# print(titanic.head())
+# print(titanic.dtypes)
+#
+# print(titanic["Age"].min())
+# print(titanic["Age"].max())
 # print(titanic["Name"].str.upper())
 # print(titanic["Name"].str.split(",").get(0))
 # no_2.resample("D").mean().plot(style="-o",figsize=(10,5))
 # plt.show()
+
 
