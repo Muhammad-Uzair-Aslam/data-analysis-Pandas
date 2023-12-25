@@ -73,6 +73,9 @@ print(svm_cv.std())
 
 
 
+
+
+
 #koi se  b 3 dataset lene hee iris k ilawa (60,40),(70,30),(80,20)
 # cross validation (3,4),(5,4),(7,4)
 # mean + std
