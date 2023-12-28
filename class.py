@@ -1,4 +1,22 @@
-# import pandas as pd
+import pandas as pd
+import matplotlib.pyplot as plt
+# airquality=pd.read_csv("air_quality_no2.csv",parse_dates=True,index_col=0)
+# airquality["station_paris"].plot()
+# plt.show()
+# print(airquality)
+# airquality=airquality.rename(columns={"station_antwerp":"ali"})
+# airquality=airquality.rename(columns=str.upper)
+# print(airquality)
+titanic=pd.read_csv("titanic.csv")
+print(titanic)
+titanic["Name"]=titanic["Name"].str.upper()
+print(titanic[["Name","Pclass","Age"]])
+abc=titanic["Name"].str.split(",").str.get(0)
+print(abc)
+print(titanic[titanic["Name"].str.contains("Countess")])
+print(titanic["Name"].str.len().idxmax())
+titanic["Sex"]=titanic["Sex"].replace({"male":"M","female":"F"})
+print(titanic["Sex"])
 # className=pd.DataFrame({
 #     "Name":["ali","usman","sohail","uzair"],
 #     "class":[8,9,7,6],
@@ -7,6 +25,10 @@
 # })
 # className["Age"]=[32,32,55,31]
 # print(className)
+# pd.Series([2,3,4,6],name="Sex")
+# print(className)
+
+
 #
 # pd.Series([1,2,3,4],name="abc")
 #
@@ -53,7 +75,7 @@
 # print(airQuality)
 
 
-import pandas as pd
+
 import matplotlib.pyplot as plt
 # airquality=pd.read_csv("air_quality_no2.csv",parse_dates=True,index_col=0)
 # # airquality.plot()
