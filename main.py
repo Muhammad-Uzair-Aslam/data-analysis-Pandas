@@ -1,7 +1,7 @@
 
 from sklearn.datasets import load_iris
 from sklearn.datasets import load_wine
-from sklearn.datasets import load_diabetes
+
 from sklearn.model_selection import train_test_split,cross_val_score
 from sklearn.ensemble import RandomForestClassifier
 from sklearn import tree
@@ -9,7 +9,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.naive_bayes import GaussianNB
 
 X, y = load_wine(return_X_y=True)
-#A,c=load_wine(return_X_y=True)
+
 W,x=load_diabetes(return_X_y=True)
 
 X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.4,random_state=0,shuffle=False)
@@ -62,6 +62,7 @@ dt_cv=cross_val_score(dt,X,y,cv=7)
 print(svm_cv)
 print(svm_cv.mean())
 print(svm_cv.std())
+
 
 
 
